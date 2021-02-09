@@ -1,0 +1,280 @@
+<?xml version="1.0"?>
+<TestCaseCatalog version="8.4.1.0">
+    <testCaseCatalog>
+        <item name="testcases/isolation/amf/I-AMF-1-CO-UE_Initial_Registration-5G_AKA-SUCI-NullEncr_KPIs.fftc">
+            <tcDescriptor version="8.4.1.0">
+                <general>
+                    <isProcedureLibrary>true</isProcedureLibrary>
+                    <language>Python</language>
+                </general>
+                <procedures>
+                    <item name="extract_kpis" isPublic="true">
+                        <arguments>
+                            <item name="measurements">
+                                <isMandatory>true</isMandatory>
+                            </item>
+                            <item name="is_b2b">
+                                <isMandatory>true</isMandatory>
+                            </item>
+                            <item name="path_to_pcap">
+                                <isMandatory>true</isMandatory>
+                            </item>
+                            <item name="standard_time"/>
+                        </arguments>
+                    </item>
+                    <item name="verify_n1_n2_interface" isPublic="true">
+                        <arguments>
+                            <item name="n1_n2_pcap">
+                                <isMandatory>true</isMandatory>
+                            </item>
+                        </arguments>
+                    </item>
+                    <item name="verify_nausf_nudm_interface" isPublic="true">
+                        <arguments>
+                            <item name="pcap_file">
+                                <isMandatory>true</isMandatory>
+                            </item>
+                        </arguments>
+                    </item>
+                    <item name="verify_ngap_message" isPublic="true">
+                        <arguments>
+                            <item name="number_id">
+                                <isMandatory>true</isMandatory>
+                            </item>
+                            <item name="proc_code">
+                                <isMandatory>true</isMandatory>
+                            </item>
+                            <item name="msg_type">
+                                <isMandatory>true</isMandatory>
+                            </item>
+                            <item name="failed_message"/>
+                        </arguments>
+                    </item>
+                    <item name="verify_http2_message" isPublic="true">
+                        <arguments>
+                            <item name="path">
+                                <isMandatory>true</isMandatory>
+                            </item>
+                            <item name="method">
+                                <isMandatory>true</isMandatory>
+                            </item>
+                            <item name="failed_message">
+                                <isMandatory>true</isMandatory>
+                            </item>
+                        </arguments>
+                    </item>
+                    <item name="check_if_DL_NAS_transport_IEs_present" isPublic="true">
+                        <arguments>
+                            <item name="number_id">
+                                <isMandatory>true</isMandatory>
+                            </item>
+                            <item name="procedure_code">
+                                <isMandatory>true</isMandatory>
+                            </item>
+                        </arguments>
+                    </item>
+                    <item name="execute_fail_message" isPublic="true">
+                        <arguments>
+                            <item name="message">
+                                <isMandatory>true</isMandatory>
+                            </item>
+                        </arguments>
+                        <response>{}</response>
+                    </item>
+                    <item name="get_supi_value" isPublic="true">
+                        <arguments>
+                            <item name="number_id">
+                                <isMandatory>true</isMandatory>
+                            </item>
+                        </arguments>
+                    </item>
+                    <item name="extract_from_mesurements" isPublic="true">
+                        <arguments>
+                            <item name="measurements">
+                                <isMandatory>true</isMandatory>
+                            </item>
+                        </arguments>
+                    </item>
+                </procedures>
+            </tcDescriptor>
+        </item>
+        <item name="testcases/isolation/upf/I-UPF-1-CO-N4_Association_Establishment_KPI.fftc">
+            <tcDescriptor version="8.4.1.0">
+                <general>
+                    <isProcedureLibrary>true</isProcedureLibrary>
+                    <language>Python</language>
+                </general>
+                <procedures>
+                    <item name="extract_measurement" isPublic="true">
+                        <arguments>
+                            <item name="path_to_pcap"/>
+                            <item name="is_b2b">
+                                <isMandatory>true</isMandatory>
+                            </item>
+                            <item name="measurements"/>
+                            <item name="favorites"/>
+                            <item name="standard_time"/>
+                        </arguments>
+                    </item>
+                    <item name="get_SUT_cpu_memory_utilization" isPublic="true">
+                        <response>{}</response>
+                    </item>
+                    <item name="get_messages_out_of_order" isPublic="true"/>
+                    <item name="execute_fail_message" isPublic="true">
+                        <arguments>
+                            <item name="message">
+                                <isMandatory>true</isMandatory>
+                            </item>
+                            <item name="should_exit">
+                                <defaultValue>false</defaultValue>
+                            </item>
+                        </arguments>
+                        <response>{}</response>
+                    </item>
+                    <item name="create_json_object" isPublic="true">
+                        <arguments>
+                            <item name="name"/>
+                            <item name="value"/>
+                            <item name="expected"/>
+                            <item name="condition"/>
+                            <item name="has_passed"/>
+                            <item name="message"/>
+                            <item name="unit"/>
+                        </arguments>
+                        <response>{}</response>
+                    </item>
+                    <item name="show_kpis" isPublic="true">
+                        <arguments>
+                            <item name="data">
+                                <isMandatory>true</isMandatory>
+                            </item>
+                        </arguments>
+                        <response>{}</response>
+                    </item>
+                    <item name="show_acceptance" isPublic="true">
+                        <arguments>
+                            <item name="data">
+                                <isMandatory>true</isMandatory>
+                            </item>
+                        </arguments>
+                    </item>
+                    <item name="show_ies" isPublic="true">
+                        <arguments>
+                            <item name="data">
+                                <isMandatory>true</isMandatory>
+                            </item>
+                        </arguments>
+                        <response>{}</response>
+                    </item>
+                    <item name="extract_favorites" isPublic="true">
+                        <arguments>
+                            <item name="favorites">
+                                <isMandatory>true</isMandatory>
+                            </item>
+                        </arguments>
+                    </item>
+                </procedures>
+            </tcDescriptor>
+        </item>
+        <item name="utility_library/topology.fftc">
+            <tcDescriptor version="8.4.1.0">
+                <general>
+                    <isProcedureLibrary>true</isProcedureLibrary>
+                    <language>Python</language>
+                </general>
+                <procedures>
+                    <item name="get_topology_resource_info" isPublic="true">
+                        <response>{}</response>
+                    </item>
+                </procedures>
+            </tcDescriptor>
+        </item>
+        <item name="utility_library/utils.fftc">
+            <tcDescriptor version="8.4.1.0">
+                <general>
+                    <isProcedureLibrary>true</isProcedureLibrary>
+                    <language>Python</language>
+                </general>
+                <procedures>
+                    <item name="convert_to_milisecond" isPublic="true">
+                        <arguments>
+                            <item name="value">
+                                <description>Value string with or without unit. Required unit value if without unit</description>
+                                <isMandatory>true</isMandatory>
+                            </item>
+                            <item name="unit">
+                                <description>Unit of value. Required value. &quot;us&quot; for micro second, &quot;ms&quot; for milisecond, &quot;s&quot; for second</description>
+                            </item>
+                        </arguments>
+                        <response>{}</response>
+                    </item>
+                    <item name="execute_fail_message" isPublic="true">
+                        <arguments>
+                            <item name="message">
+                                <isMandatory>true</isMandatory>
+                            </item>
+                            <item name="should_exit">
+                                <defaultValue>false</defaultValue>
+                            </item>
+                        </arguments>
+                        <response>{}</response>
+                    </item>
+                    <item name="insert_devider_string" isPublic="true">
+                        <arguments>
+                            <item name="char">
+                                <defaultValue>-</defaultValue>
+                                <isMandatory>true</isMandatory>
+                            </item>
+                            <item name="length">
+                                <defaultValue>60</defaultValue>
+                                <isMandatory>true</isMandatory>
+                            </item>
+                        </arguments>
+                    </item>
+                    <item name="isIPv4" isPublic="true">
+                        <arguments>
+                            <item name="ip">
+                                <isMandatory>true</isMandatory>
+                            </item>
+                        </arguments>
+                        <response>{}</response>
+                    </item>
+                    <item name="get_SUT_cpu_memory_utilization" isPublic="true">
+                        <arguments>
+                            <item name="is_b2b">
+                                <isMandatory>true</isMandatory>
+                            </item>
+                        </arguments>
+                        <response>{}</response>
+                    </item>
+                    <item name="get_profile_A_SUCI_keys" isPublic="true">
+                        <arguments>
+                            <item name="ts_ip_address">
+                                <description>IP Address or Hostname of the TS you want to SSH to</description>
+                                <isMandatory>true</isMandatory>
+                            </item>
+                            <item name="ssh_port">
+                                <description>SSH port</description>
+                                <defaultValue>22</defaultValue>
+                            </item>
+                        </arguments>
+                        <response>{}</response>
+                    </item>
+                    <item name="get_profile_B_SUCI_keys" isPublic="true">
+                        <arguments>
+                            <item name="ts_ip_address">
+                                <description>IP Address or Hostname of the TS you want to SSH to</description>
+                                <isMandatory>true</isMandatory>
+                            </item>
+                            <item name="ssh_port">
+                                <description>SSH port</description>
+                                <defaultValue>22</defaultValue>
+                            </item>
+                        </arguments>
+                        <response>{}</response>
+                    </item>
+                </procedures>
+            </tcDescriptor>
+        </item>
+    </testCaseCatalog>
+</TestCaseCatalog>
