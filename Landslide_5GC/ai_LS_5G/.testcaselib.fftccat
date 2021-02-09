@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<TestCaseCatalog version="8.4.1.0">
+<TestCaseCatalog version="8.4.0.202012071239">
     <testCaseCatalog>
         <item name="testcases/isolation/amf/I-AMF-1-CO-UE_Initial_Registration-5G_AKA-SUCI-NullEncr_KPIs.fftc">
-            <tcDescriptor version="8.4.1.0">
+            <tcDescriptor version="8.4.0.202012071239">
                 <general>
                     <isProcedureLibrary>true</isProcedureLibrary>
                     <language>Python</language>
@@ -99,7 +99,7 @@
             </tcDescriptor>
         </item>
         <item name="testcases/isolation/upf/I-UPF-1-CO-N4_Association_Establishment_KPI.fftc">
-            <tcDescriptor version="8.4.1.0">
+            <tcDescriptor version="8.4.0.202012071239">
                 <general>
                     <isProcedureLibrary>true</isProcedureLibrary>
                     <language>Python</language>
@@ -177,7 +177,7 @@
             </tcDescriptor>
         </item>
         <item name="utility_library/topology.fftc">
-            <tcDescriptor version="8.4.1.0">
+            <tcDescriptor version="8.4.0.202012071239">
                 <general>
                     <isProcedureLibrary>true</isProcedureLibrary>
                     <language>Python</language>
@@ -190,7 +190,7 @@
             </tcDescriptor>
         </item>
         <item name="utility_library/utils.fftc">
-            <tcDescriptor version="8.4.1.0">
+            <tcDescriptor version="8.4.0.202012071239">
                 <general>
                     <isProcedureLibrary>true</isProcedureLibrary>
                     <language>Python</language>
@@ -243,32 +243,6 @@
                         <arguments>
                             <item name="is_b2b">
                                 <isMandatory>true</isMandatory>
-                            </item>
-                        </arguments>
-                        <response>{}</response>
-                    </item>
-                    <item name="get_profile_A_SUCI_keys" isPublic="true">
-                        <arguments>
-                            <item name="ts_ip_address">
-                                <description>IP Address or Hostname of the TS you want to SSH to</description>
-                                <isMandatory>true</isMandatory>
-                            </item>
-                            <item name="ssh_port">
-                                <description>SSH port</description>
-                                <defaultValue>22</defaultValue>
-                            </item>
-                        </arguments>
-                        <response>{}</response>
-                    </item>
-                    <item name="get_profile_B_SUCI_keys" isPublic="true">
-                        <arguments>
-                            <item name="ts_ip_address">
-                                <description>IP Address or Hostname of the TS you want to SSH to</description>
-                                <isMandatory>true</isMandatory>
-                            </item>
-                            <item name="ssh_port">
-                                <description>SSH port</description>
-                                <defaultValue>22</defaultValue>
                             </item>
                         </arguments>
                         <response>{}</response>
