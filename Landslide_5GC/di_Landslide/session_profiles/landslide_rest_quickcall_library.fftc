@@ -3445,10 +3445,70 @@
                                 <body>&apos;FIREBALL_MODE&apos; in keywords:</body>
                             </command>
                             <nestedSteps>
-                                <item guid="568ffe45-2a27-4d09-9da5-5816c1c10345" action="eval" useFieldsInCommand="false">
+                                <item guid="875902d4-1040-45ee-92c2-6ed5e829b179" action="eval" useFieldsInCommand="false">
                                     <command>
-                                        <body>ts_mode = &quot;Fireball&quot;</body>
+                                        <body>fireball_license_required = param(&apos;TC_parameters/Fireball_License_Required&apos;);print(fireball_license_required)</body>
                                     </command>
+                                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                                </item>
+                                <item guid="fcc77d80-5a97-4b4c-9886-7bde0c0b33a6" action="if" useFieldsInCommand="false">
+                                    <command>
+                                        <body>fireball_license_required and str(fireball_license_required).lower() == &apos;true&apos;:</body>
+                                    </command>
+                                    <nestedSteps>
+                                        <item guid="fa1e39c0-16cc-4771-8810-60bae7cb5104" action="if" useFieldsInCommand="false">
+                                            <command>
+                                                <body>not ts_mode:</body>
+                                            </command>
+                                            <nestedSteps>
+                                                <item guid="fb76f43e-1be8-4fba-9e4d-ff975fee63cb" action="eval" useFieldsInCommand="false">
+                                                    <command>
+                                                        <body>ts_mode = &quot;Fireball&quot;</body>
+                                                    </command>
+                                                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                                                </item>
+                                            </nestedSteps>
+                                            <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                                        </item>
+                                        <item guid="75c9a351-d719-4911-b95c-43c0fac2e80e" action="else" useFieldsInCommand="false">
+                                            <nestedSteps>
+                                                <item guid="62a58c9e-ad33-4da2-a878-7ca6ea4146ef" action="eval" useFieldsInCommand="false">
+                                                    <command>
+                                                        <body>ts_mode += &quot;;Fireball&quot;</body>
+                                                    </command>
+                                                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                                                </item>
+                                            </nestedSteps>
+                                            <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                                        </item>
+                                    </nestedSteps>
+                                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                                </item>
+                                <item guid="3981fe93-2ffc-474e-af8f-6ff5c6bc8bce" action="else" useFieldsInCommand="false">
+                                    <nestedSteps>
+                                        <item guid="2907ac21-51c4-4ef0-9d40-24dbfe6118a0" action="if" useFieldsInCommand="false">
+                                            <command>
+                                                <body>not info(&apos;exists&apos;, &apos;global&apos;, &apos;fireball_license_required&apos;):</body>
+                                            </command>
+                                            <nestedSteps>
+                                                <item guid="db144848-29e5-4ebe-86fb-a92ad77cb6aa" action="message" useFieldsInCommand="false">
+                                                    <command>
+                                                        <body>Information:Run this script without checking Fireball mode.</body>
+                                                    </command>
+                                                    <applicationProperties type="com.fnfr.svt.execution.builtin.exec.MessagePropertyGroup">
+                                                        <message inherit="false">Run this script without checking Fireball mode.</message>
+                                                    </applicationProperties>
+                                                </item>
+                                                <item guid="74c549dd-c5f9-4e9f-9b0c-02118bf42895" action="eval" useFieldsInCommand="false">
+                                                    <command>
+                                                        <body>gset(&apos;fireball_license_required&apos;, fireball_license_required)</body>
+                                                    </command>
+                                                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                                                </item>
+                                            </nestedSteps>
+                                            <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                                        </item>
+                                    </nestedSteps>
                                     <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
                                 </item>
                             </nestedSteps>
